@@ -1,0 +1,50 @@
+/* Enhance the existing glass card used by StatsCard */
+.card-glass {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 16px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.24);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle gloss accent */
+.card-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(300px 120px at -20% -20%, rgba(255,255,255,0.08), transparent 60%),
+              radial-gradient(220px 100px at 120% -10%, rgba(59,130,246,0.08), transparent 65%);
+  pointer-events: none;
+}
+
+/* Title (first child div in StatsCard) */
+.card-glass > div:first-child {
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .02em;
+  margin-bottom: 6px;
+}
+
+/* Value number (second child div in StatsCard) */
+.card-glass > div:nth-child(2) {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+}
+
+/* Hover lift */
+.card-glass:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255,255,255,0.18);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.30);
+  transition: transform .18s ease, background-color .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+/* Accent colors already exist in index.css:
+   .text-opportunity (green), .text-overvalued (red), .text-neutral (muted) */
