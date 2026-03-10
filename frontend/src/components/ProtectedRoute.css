@@ -1,0 +1,34 @@
+/* Optional: Use when you want to show a blocking screen instead of redirect */
+.guard-screen {
+  min-height: 60vh;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+}
+.guard-box {
+  max-width: 520px;
+  width: 100%;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 28px;
+  text-align: center;
+  box-shadow: 0 14px 36px rgba(0,0,0,0.28);
+}
+.guard-title { font-size: 20px; font-weight: 800; margin: 0 0 6px; }
+.guard-text { color: #94a3b8; margin: 0 0 16px; }
+.guard-actions { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+.guard-actions a,
+.guard-actions button {
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #e2e8f0;
+  background: transparent;
+  text-decoration: none;
+  font-weight: 700;
+}
+.guard-actions a:hover,
+.guard-actions button:hover { background: rgba(255,255,255,0.08); color: #fff; }
